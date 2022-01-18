@@ -1,13 +1,13 @@
 const memorize = (func) => {
     const memory = {};
     return (...args) => {
-        //console.log(argsKey);
-        if (!memory[argsKey]) {
+        //console.log(args);
+        if (!memory[args]) {
             let tmp=func(...args);
-            memory[argsKey]=tmp;
+            memory[args]=tmp;
         }
         //console.log("from cache")
-        return memory[argsKey];
+        return memory[args];
     };
 };
 
