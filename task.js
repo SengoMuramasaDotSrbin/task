@@ -1,10 +1,10 @@
 const memorize = (func) => {
     const memory = {};
     return (...args) => {
-        const argsKey = JSON.stringify(args);
         //console.log(argsKey);
         if (!memory[argsKey]) {
-            memory[argsKey] = func(...args);
+            let tmp=func(...args);
+            memory[argsKey]=tmp
         }
         //console.log("from cache")
         return memory[argsKey];
