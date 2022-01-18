@@ -4,7 +4,7 @@ const memorize = (func) => {
         //console.log(argsKey);
         if (!memory[argsKey]) {
             let tmp=func(...args);
-            memory[argsKey]=tmp
+            memory[argsKey]=tmp;
         }
         //console.log("from cache")
         return memory[argsKey];
